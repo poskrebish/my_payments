@@ -21,22 +21,37 @@
 
 1. Клонировать репозиторий
 ```
-git clone https://github.com/твой-логин/payments-api.git
+git clone https://github.com/poskrebish/payments-api.git
 
 cd payments-api
 ```
 
-3. Запустить проект
+2. Запустить проект
 ```
 docker compose up -d --build
 ```
 
-5. Проверить логи
+3. Проверить логи
 ```
 docker logs payments_app -f
 ```
 
-6. Открыть документацию
+4. Открыть документацию
+```
+http://localhost:8000/docs
+```
+
+## Запуск проекта через Docker-образ
+
+1. Скачать образ
+```
+docker pull ghcr.io/poskrebish/my_payments:latest
+```
+2. Запустить контейнер
+```
+docker run -p 8000:8000 ghcr.io/poskrebish/my_payments:latest
+```
+3. Открыть документацию
 ```
 http://localhost:8000/docs
 ```
